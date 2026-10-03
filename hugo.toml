@@ -1,0 +1,104 @@
+baseURL = "https://andodemian.com/"
+locale = "en-US"
+timeZone = "Europe/Bucharest"
+title = "Ando Demian"
+theme = "PaperMod"
+enableRobotsTXT = true
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
+
+# Keep the old Astro feed URL (/rss.xml) working for existing subscribers
+[outputFormats.RSS]
+  baseName = "rss"
+
+[outputs]
+  # JSON index powers the built-in search page
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+  # Allow raw HTML in posts (embeds, details/summary, etc.)
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false
+  style = "monokai"
+
+[params]
+  env = "production"
+  description = "Notes from /dev/null. If you can't do Good, better do Bad well."
+  author = "Ando"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = true
+  ShowToc = false
+  ShowShareButtons = false
+  disableSpecial1stPost = true
+  mainSections = ["posts"]
+
+  # GoatCounter analytics: set your code (e.g. "andodemian" for andodemian.goatcounter.com).
+  # Leave empty to disable tracking entirely.
+  goatcounter = ""
+
+  [params.homeInfoParams]
+    Title = "Notes from /dev/null."
+    Content = "Experience taught me that simplicity scales better than complexity ever will."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/AndoDemian"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/andrei-tita-2b01361b1/"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:andodemian@outlook.com"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/rss.xml"
+
+  [params.assets]
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    threshold = 0.4
+    keys = ["title", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archive"
+    url = "/archives/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 40
+
+[taxonomies]
+  tag = "tags"

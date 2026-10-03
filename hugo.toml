@@ -31,9 +31,8 @@ enableRobotsTXT = true
   ground = "brown"
   defaultTheme = "auto"
   brand = "Ando Demian"
-  description = "Notes from /dev/null. If you can't do Good, better do Bad well."
+  description = "If you can't do Good, better do Bad well."
   tagline = "Experience taught me that simplicity scales better than complexity ever will."
-  masthead = 'Notes from<br>/dev/null<span class="accent">.</span>'
   copyright = "© 2026 Ando Demian"
   favicon = "/favicon.ico"
   mainSections = ["posts"]

@@ -1,0 +1,54 @@
+# Sveltia CMS — browser editor at https://andodemian.com/admin/
+# Docs: https://sveltiacms.app/en/docs
+
+backend:
+  name: github
+  repo: AndoDemian/andodemian.github.io
+  branch: main
+  # Uncomment after deploying the Cloudflare Worker (see README.md, "Editor login").
+  # Until then, use "Sign In with Token" on the login screen.
+  # base_url: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+  commit_messages:
+    create: "Add post: {{slug}}"
+    update: "Update post: {{slug}}"
+    delete: "Delete post: {{slug}}"
+    uploadMedia: "Upload {{path}}"
+    deleteMedia: "Delete {{path}}"
+
+site_url: https://andodemian.com
+display_url: https://andodemian.com
+logo_url: /favicon-32x32.png
+
+# Global fallback for uploads outside posts
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: content/posts
+    create: true
+    # Hugo page bundle: content/posts/<slug>/index.md, images live next to the post
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    format: yaml-frontmatter
+    sortable_fields: [date, title]
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}{{draft | ternary(' (draft)', '')}}"
+    preview_path: "posts/{{slug}}/"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: draft, label: Draft, widget: boolean, default: true, hint: "Drafts are committed but not published." }
+      - { name: description, label: Description, widget: text, required: false, hint: "One or two sentences, shown in post lists and link previews." }
+      - { name: tags, label: Tags, widget: list, required: false }
+      - name: cover
+        label: Cover image
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: image, label: Image, widget: image, required: false }
+          - { name: alt, label: Alt text, widget: string, required: false }
+      - { name: body, label: Body, widget: markdown }

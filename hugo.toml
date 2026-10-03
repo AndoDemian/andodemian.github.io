@@ -41,7 +41,7 @@ enableRobotsTXT = true
 
   # GoatCounter analytics: set your code (e.g. "andodemian" for andodemian.goatcounter.com).
   # Leave empty to disable tracking entirely.
-  goatcounter = ""
+  goatcounter = "andodemian"
 
   [params.author]
     name = "Ando"

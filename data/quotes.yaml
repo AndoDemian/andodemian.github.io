@@ -2,8 +2,6 @@
 # `pre` renders in the body colour, `accent` in the accent colour; "\n" forces a line break.
 lines:
   - pre: "Experience taught me that\n"
-    accent: "simplicity scales."
+    accent: "simplicity scales better than complexity ever will."
   - pre: "If you can't do Good,\n"
-    accent: "do Bad well."
-  - pre: "Notes from "
-    accent: "/dev/null."
+    accent: "better do Bad well."

@@ -2,9 +2,8 @@ baseURL = "https://andodemian.com/"
 locale = "en-US"
 timeZone = "Europe/Bucharest"
 title = "Ando Demian"
-theme = "PaperMod"
+theme = "nuno"
 enableRobotsTXT = true
-enableEmoji = true
 
 [pagination]
   pagerSize = 10
@@ -23,29 +22,31 @@ enableEmoji = true
 
 [markup.highlight]
   noClasses = false
-  style = "monokai"
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
 
 [params]
-  env = "production"
-  description = "Notes from /dev/null. If you can't do Good, better do Bad well."
-  author = "Ando"
+  ground = "brown"
   defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = false
-  ShowCodeCopyButtons = true
-  ShowToc = false
-  ShowShareButtons = false
-  disableSpecial1stPost = true
+  brand = "Ando Demian"
+  description = "Notes from /dev/null. If you can't do Good, better do Bad well."
+  tagline = "Experience taught me that simplicity scales better than complexity ever will."
+  masthead = 'Notes from<br>/dev/null<span class="accent">.</span>'
+  copyright = "© 2026 Ando Demian"
+  favicon = "/favicon.ico"
   mainSections = ["posts"]
+  postsOnHome = 6
+  homeStyle = "ledger"
+  readingProgress = true
 
   # GoatCounter analytics: set your code (e.g. "andodemian" for andodemian.goatcounter.com).
   # Leave empty to disable tracking entirely.
   goatcounter = ""
 
-  [params.homeInfoParams]
-    Title = "Notes from /dev/null."
-    Content = "Experience taught me that simplicity scales better than complexity ever will."
+  [params.author]
+    name = "Ando"
 
   [[params.socialIcons]]
     name = "github"
@@ -58,22 +59,6 @@ enableEmoji = true
   [[params.socialIcons]]
     name = "email"
     url = "mailto:andodemian@outlook.com"
-
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/rss.xml"
-
-  [params.assets]
-    favicon = "/favicon.ico"
-    favicon16x16 = "/favicon-16x16.png"
-    favicon32x32 = "/favicon-32x32.png"
-    apple_touch_icon = "/apple-touch-icon.png"
-
-  [params.fuseOpts]
-    isCaseSensitive = false
-    shouldSort = true
-    threshold = 0.4
-    keys = ["title", "summary", "content"]
 
 [menu]
   [[menu.main]]
@@ -93,12 +78,6 @@ enableEmoji = true
     name = "Archive"
     url = "/archives/"
     weight = 30
-
-  [[menu.main]]
-    identifier = "search"
-    name = "Search"
-    url = "/search/"
-    weight = 40
 
 [taxonomies]
   tag = "tags"

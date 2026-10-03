@@ -1,6 +1,0 @@
-{{- /* GoatCounter: privacy-friendly, cookieless page counts. Enabled only when params.goatcounter is set and the site is built for production. */ -}}
-{{- with site.Params.goatcounter }}
-{{- if hugo.IsProduction }}
-<script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-{{- end }}
-{{- end }}

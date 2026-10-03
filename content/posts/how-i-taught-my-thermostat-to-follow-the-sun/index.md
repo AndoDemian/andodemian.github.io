@@ -1,11 +1,16 @@
 ---
-title: "How I Taught My Thermostat to Follow the Sun"
-date: 2025-11-08T16:20:45+02:00
-description: "A story about how I automated my home heating with Home Assistant to react dynamically to solar power production, turning excess sunlight into comfort, not wasted watts."
-tags: ["homeassistant", "automation", "solar", "energy", "smart-home", "homelab"]
-cover:
-  image: "cover.webp"
-  alt: "How I Taught My Thermostat to Follow the Sun"
+title: How I Taught My Thermostat to Follow the Sun
+date: 2025-11-08T16:20:00
+draft: true
+description: A story about how I automated my home heating with Home Assistant to react dynamically to solar power production, turning excess sunlight into comfort, not wasted watts.
+tags:
+  - homeassistant
+  - automation
+  - solar
+  - energy
+  - smart-home
+  - homelab
+cover: null
 ---
 
 ### The Day I Realized My Solar Panels Were Heating the Wrong House

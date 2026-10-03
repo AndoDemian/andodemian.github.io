@@ -13,6 +13,8 @@ tags:
 cover: null
 ---
 
+![](cover.webp)
+
 ### The Day I Realized My Solar Panels Were Heating the Wrong House
 
 It was a Tuesday afternoon in October. Sunny, cold, and I was sitting at my desk watching my Home Assistant dashboard when it hit me: my solar panels were producing 3.2kW of power, my house was consuming maybe 800W, and the rest (about 2.4kW) was flowing back to the grid.
@@ -35,7 +37,7 @@ The solution was clear: don’t treat solar production like a simple on/off swit
 
 Adding intelligence: **the timer solution**.
 
-I needed to distinguish between *“cloudy period”* and *“random cloud passing by.”*
+I needed to distinguish between _“cloudy period”_ and _“random cloud passing by.”_
 
 I added timers.
 

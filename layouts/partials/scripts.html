@@ -40,3 +40,7 @@
 <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 {{- end }}
 {{- end }}
+{{- /* Shuffle the typed-masthead quotes on each visit. Runs before the deferred theme script reads them. */ -}}
+<script>
+(function(){var p=document.querySelector('[data-nuno-quotes]');if(!p)return;try{var a=JSON.parse(p.textContent);if(!Array.isArray(a))return;for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}p.textContent=JSON.stringify(a)}catch(e){}})();
+</script>
